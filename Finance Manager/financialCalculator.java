@@ -35,11 +35,13 @@ public class financialCalculator {
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
         System.out.println("Welcome to the Financial Calculator!");
+        System.out.println("\n******************************************");
         System.out.println("There are 2 programs in this calculator: " +
                 "\n 1. Calculate wealth by year" +
                 "\n 2. Calculate years to financial freedom");
+        System.out.println("******************************************");
 
-        int userChoice = -1;
+        int userChoice = 0;
         while (userChoice != 1 && userChoice != 2) {
             System.out.print("\nWhich program would you like to use? (Enter 1 or 2): ");
             try {
