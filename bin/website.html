@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Financial Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+        }
+
+        .calculator {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Financial Calculator</h1>
+    <p>Click on a calculator to get started:</p>
+    <button onclick="showCalculator('wealth-by-year')">Calculate Wealth by Year</button>
+    <button onclick="showCalculator('years-to-freedom')">Calculate Years to Financial Freedom</button>
+
+    <div id="wealth-by-year" class="calculator">
+        <h2>Calculate Wealth by Year</h2>
+        <label for="current-wealth">Current Wealth:</label>
+        <input type="number" id="current-wealth"><br><br>
+        <label for="monthly-savings">Monthly Savings:</label>
+        <input type="number" id="monthly-savings"><br><br>
+        <label for="rate-of-return">Rate of Return:</label>
+        <input type="number" id="rate-of-return"><br><br>
+        <label for="years">Years:</label>
+        <input type="number" id="years"><br><br>
+        <button onclick="calculateWealth()">Calculate Wealth</button>
+        <p id="wealth-result"></p>
+    </div>
+
+    <div id="years-to-freedom" class="calculator">
+        <h2>Calculate Years to Financial Freedom</h2>
+        <label for="current-wealth-2">Current Wealth:</label>
+        <input type="number" id="current-wealth-2"><br><br>
+        <label for="monthly-savings-2">Monthly Savings:</label>
+        <input type="number" id="monthly-savings-2"><br><br>
+        <label for="rate-of-return-2">Rate of Return:</label>
+        <input type="number" id="rate-of-return-2"><br><br>
+        <label for="target-wealth">Target Wealth:</label>
+        <input type="number" id="target-wealth"><br><br>
+        <button onclick="calculateYearsToFreedom()">Calculate Years</button>
+        <p id="freedom-result"></p>
+    </div>
+
+    <script src="calculator.js"></script>
+    <script>
+        // Function to show the selected calculator
+        function showCalculator(calculatorId) {
+            const calculators = document.getElementsByClassName('calculator');
+            for (let i = 0; i < calculators.length; i++) {
+                calculators[i].style.display = 'none';
+            }
+            document.getElementById(calculatorId).style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
