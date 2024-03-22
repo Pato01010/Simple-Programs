@@ -31,6 +31,7 @@ public class financialCalculator {
         return years;
     }
 
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
         System.out.println("Welcome to the Financial Calculator!");
